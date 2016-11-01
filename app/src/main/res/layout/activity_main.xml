@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.moore.picktimeview.MainActivity">
+
+    <Button
+        android:id="@+id/Main_btnTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnClick"
+        android:text="选时间" />
+
+    <Button
+        android:id="@+id/Main_btnDat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnClick"
+        android:text="选日期" />
+
+    <Button
+        android:id="@+id/Main_btnValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnClick"
+        android:text="选数值" />
+
+    <Button
+        android:id="@+id/Main_btnValues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnClick"
+        android:text="选数值（多个）" />
+
+    <Button
+        android:id="@+id/Main_btnType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnClick"
+        android:text="选字符串选项" />
+
+    <TextView
+        android:id="@+id/Main_tvSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/Main_pvLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <com.example.moore.picktimeview.widget.PickTimeView
+            android:id="@+id/pickTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <com.example.moore.picktimeview.widget.PickTimeView
+            android:id="@+id/pickDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.example.moore.picktimeview.widget.PickValueView
+            android:id="@+id/pickValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.example.moore.picktimeview.widget.PickValueView
+            android:id="@+id/pickValues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <com.example.moore.picktimeview.widget.PickValueView
+            android:id="@+id/pickString"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
